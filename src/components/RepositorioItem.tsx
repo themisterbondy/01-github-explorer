@@ -1,4 +1,12 @@
-export function RepositorioItem(props) {
+interface RepositorioItemPros{
+  repository:{
+    name:string;
+    description:string;
+    html_url:string;
+  }
+}
+
+export function RepositorioItem(props:RepositorioItemPros) {
   return (
     <li>
       <strong>{props.repository?.name}</strong>
@@ -8,3 +16,4 @@ export function RepositorioItem(props) {
     </li>
   );
 }
+ 
